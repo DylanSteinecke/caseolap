@@ -77,7 +77,7 @@ def check_all_md5_in_dir(dir,logfile):
         
         if os.path.isdir(dir):
             for file in os.listdir(dir):
-                if re.search('^medline17n\d\d\d\d.xml.gz$', file):
+                if re.search('^pubmed22n\d\d\d\d.xml.gz$', file):     # Change this number based on year (e.g., '22' for 2022)
                     count += 1
                     check_md5(os.path.join(dir, file))
                     if count % 100 == 0:
